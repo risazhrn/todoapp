@@ -9,6 +9,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
+
 func main() {
 	// Load environment variables
 	err := godotenv.Load()
@@ -23,7 +24,7 @@ func main() {
 	router := gin.Default()
 
 	// Register routes
-	routes.RegisterRoutes(router)
+	routes.SetupRouter(router)
 
 	// Start the server
 	router.Run("localhost:8080")
